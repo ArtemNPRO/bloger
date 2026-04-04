@@ -5,6 +5,7 @@ from dataclasses import dataclass
 
 from dotenv import load_dotenv
 
+# Load local .env first, then allow real environment to override values.
 load_dotenv()
 
 

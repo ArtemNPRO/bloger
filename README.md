@@ -27,7 +27,7 @@ Then fill:
 
 ```bash
 TELEGRAM_BOT_TOKEN=...
-# or alias supported by app:
+# supported alias:
 TG_API_TOKEN=...
 
 DEEPSEEK_API_KEY=...
@@ -43,7 +43,7 @@ DB_PATH=bloger.sqlite3
 ## Run locally
 
 ```bash
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 python main.py
@@ -51,6 +51,6 @@ python main.py
 
 ## Notes
 
-- GPT generation switched to **DeepSeek** via OpenAI-compatible API client (`base_url=https://api.deepseek.com`).
+- Text generation uses **DeepSeek** via OpenAI-compatible API (`base_url=https://api.deepseek.com`).
 - Voice messages are transcribed with Whisper API.
 - Publish button confirms publishing for MVP and stores generated content locally.
