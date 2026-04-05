@@ -3,11 +3,14 @@ from __future__ import annotations
 import os
 from dataclasses import dataclass
 
+ codex/build-mvp-for-ai-telegram-assistant-lop13o
 from dotenv import load_dotenv
 
 # Load local .env first, then allow real environment to override values.
 load_dotenv()
 
+
+ main
 
 @dataclass(slots=True)
 class Settings:
@@ -21,11 +24,19 @@ class Settings:
 
 
 def load_settings() -> Settings:
+ codex/build-mvp-for-ai-telegram-assistant-lop13o
     telegram_bot_token = os.getenv("TELEGRAM_BOT_TOKEN") or os.getenv("TG_API_TOKEN", "")
     deepseek_api_key = os.getenv("DEEPSEEK_API_KEY", "")
 
     if not telegram_bot_token:
         raise ValueError("TELEGRAM_BOT_TOKEN (or TG_API_TOKEN) is required")
+
+    telegram_bot_token = os.getenv("TELEGRAM_BOT_TOKEN", "")
+    deepseek_api_key = os.getenv("DEEPSEEK_API_KEY", "")
+
+    if not telegram_bot_token:
+        raise ValueError("TELEGRAM_BOT_TOKEN is required")
+ main
     if not deepseek_api_key:
         raise ValueError("DEEPSEEK_API_KEY is required")
 

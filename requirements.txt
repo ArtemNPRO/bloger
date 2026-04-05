@@ -4,4 +4,7 @@ uvicorn>=0.30.6
 aiosqlite>=0.20.0
 openai>=1.51.0
 apscheduler>=3.10.4
+ codex/build-mvp-for-ai-telegram-assistant-lop13o
 python-dotenv>=1.0.1
+
+ main
